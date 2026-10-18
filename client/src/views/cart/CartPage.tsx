@@ -198,23 +198,9 @@ export function CartPage() {
    * Возвращает множитель шага наценки в зависимости от срока.
    * Каждые следующие месяцы после базовых 3-х добавляют еще 35%.
    */
-  const getInstallmentMultiplier = (months: number): number => {
-    switch (months) {
-      case 3:
-        return 1; // +35%
-      case 4:
-        return 2; // +70%
-      case 6:
-        return 3; // +105%
-      case 12:
-        return 4; // +140%
-      default:
-        return 1;
-    }
-  };
+
 
   // Расчет итоговой суммы с динамической комиссией
-  const multiplier = getInstallmentMultiplier(installmentMonths);
 
   const hasSelectedItems = selectedItems.length > 0;
 
