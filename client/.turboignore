@@ -1,0 +1,4 @@
+# Turbopack ignore file - исключаем server директорию
+server/
+**/server/**
+server/**/*

@@ -1,0 +1,35 @@
+/**
+ * Статические данные для сидов пользователей.
+ * Реалистичные имена и email для тестовых пользователей.
+ */
+export const SEED_USERS = [
+  { name: 'Иван Петров', email: 'ivan.petrov@example.com' },
+  { name: 'Мария Сидорова', email: 'maria.sidorova@example.com' },
+  { name: 'Алексей Козлов', email: 'alexey.kozlov@example.com' },
+  { name: 'Елена Новикова', email: 'elena.novikova@example.com' },
+  { name: 'Дмитрий Морозов', email: 'dmitry.morozov@example.com' },
+  { name: 'Анна Волкова', email: 'anna.volkova@example.com' },
+  { name: 'Сергей Соколов', email: 'sergey.sokolov@example.com' },
+  { name: 'Ольга Лебедева', email: 'olga.lebedeva@example.com' },
+  { name: 'Андрей Козлов', email: 'andrey.kozlov@example.com' },
+  { name: 'Наталья Егорова', email: 'natalya.egorova@example.com' },
+  { name: 'Павел Павлов', email: 'pavel.pavlov@example.com' },
+  { name: 'Татьяна Семёнова', email: 'tatyana.semyonova@example.com' },
+  { name: 'Михаил Голубев', email: 'mikhail.golubev@example.com' },
+  { name: 'Екатерина Виноградова', email: 'ekaterina.vinogradova@example.com' },
+  { name: 'Николай Богданов', email: 'nikolay.bogdanov@example.com' },
+  { name: 'Юлия Воробьёва', email: 'yulia.vorobyova@example.com' },
+  { name: 'Владимир Фёдоров', email: 'vladimir.fedorov@example.com' },
+  { name: 'Светлана Михайлова', email: 'svetlana.mikhailova@example.com' },
+  { name: 'Игорь Белов', email: 'igor.belov@example.com' },
+  { name: 'Лариса Тарасова', email: 'larisa.tarasova@example.com' },
+  { name: 'Александр Кузнецов', email: 'alexander.kuznetsov@example.com' },
+  { name: 'Виктория Попова', email: 'victoria.popova@example.com' },
+  { name: 'Роман Степанов', email: 'roman.stepanov@example.com' },
+  { name: 'Марина Николаева', email: 'marina.nikolaeva@example.com' },
+  { name: 'Артём Орлов', email: 'artem.orlov@example.com' },
+  { name: 'Полина Зайцева', email: 'polina.zaytseva@example.com' },
+  { name: 'Максим Соловьёв', email: 'maxim.solovyov@example.com' },
+  { name: 'Дарья Васильева', email: 'daria.vasilyeva@example.com' },
+  { name: 'Кирилл Романов', email: 'kirill.romanov@example.com' },
+];

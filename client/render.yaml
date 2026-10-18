@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: ibr-backend
+    env: node
+    plan: free
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: SECRET_KEY_ACCESS_TOKEN
+        sync: false
+      - key: SECRET_KEY_REFRESH_TOKEN
+        sync: false
+      - key: JSON_WEB_TOKEN_SECRET_KEY
+        sync: false
+      - key: EMAIL_HOST
+        sync: false
+      - key: EMAIL_PORT
+        value: 465
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASSWORD
+        sync: false
+      - key: SMS_RU_API_ID
+        sync: false
+      - key: cloudinary_Config_Cloud_Name
+        sync: false
+      - key: cloudinary_Config_api_key
+        sync: false
+      - key: cloudinary_Config_api_secret
+        sync: false
