@@ -116,14 +116,7 @@ export function ProductMeta({
     }, [images.length, handlePrevImage, handleNextImage]);
   
     // Вычисляем какие изображения нужно рендерить (текущее + соседние для плавности)
-    const visibleImageIndices = useMemo(() => {
-      const indices = new Set<number>();
-      indices.add(currentImageIndex);
-      if (currentImageIndex > 0) indices.add(currentImageIndex - 1);
-      if (currentImageIndex < images.length - 1) indices.add(currentImageIndex + 1);
-      return Array.from(indices);
-    }, [currentImageIndex, images.length]);
-  
+
 
   const reviewText =
     product.reviewCount === 1

@@ -53,14 +53,6 @@ export function ProductGallery({
     setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   }, [images.length]);
 
-  const handleImageSelect = useCallback(
-    (index: number) => {
-      if (index >= 0 && index < images.length) {
-        setCurrentImageIndex(index);
-      }
-    },
-    [images.length],
-  );
 
   useEffect(() => {
     setCurrentImageIndex(0);

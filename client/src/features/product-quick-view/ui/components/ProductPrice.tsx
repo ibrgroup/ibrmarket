@@ -1,17 +1,13 @@
 'use client';
 
 import type { Product } from '@/entities/product';
-import { useMemo } from 'react';
 
 interface ProductPriceProps {
   product: Product;
 }
 
 export function ProductPrice({ product }: ProductPriceProps) {
-  const discountPercent = useMemo(() => {
-    if (!product.oldPrice || !product.price) return 0;
-    return Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100);
-  }, [product.oldPrice, product.price]);
+
 
   return (
     <div className="flex py-3 flex-wrap items-center font-roboto gap-3">
