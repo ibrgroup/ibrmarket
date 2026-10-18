@@ -58,8 +58,6 @@ function touchDistance(a: { clientX: number; clientY: number }, b: { clientX: nu
 export function ProductGallerySection({
   productName,
   gallerySlides,
-  hasDiscount,
-  discountPercent,
   inStock,
   isWishlisted,
   copied,
