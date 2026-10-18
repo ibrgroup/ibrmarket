@@ -1,3 +1,4 @@
+{/* deploy fix */}
 import { ProductService } from '@/shared/api/services/product-service';
 import { getBaseUrl } from '@/shared/config/site';
 import type { MetadataRoute } from 'next';

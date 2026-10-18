@@ -1,3 +1,4 @@
+{/* deploy fix */}
 import { getThemeAntiFlashHeadCss } from '@/shared/colors/theme-anti-fouc';
 import {
   COLOR_SCHEME_COOKIE_NAME,

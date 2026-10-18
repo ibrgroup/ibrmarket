@@ -1,3 +1,4 @@
+{/* deploy fix */}
 import { getBaseUrl } from '@/shared/config/site';
 import type { MetadataRoute } from 'next';
 
