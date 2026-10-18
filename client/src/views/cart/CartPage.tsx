@@ -215,7 +215,6 @@ export function CartPage() {
 
   // Расчет итоговой суммы с динамической комиссией
   const multiplier = getInstallmentMultiplier(installmentMonths);
-  const installmentTotal = baseTotal * (1 + 0.35 * multiplier);
 
   const hasSelectedItems = selectedItems.length > 0;
 
