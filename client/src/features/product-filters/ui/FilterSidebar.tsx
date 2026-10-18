@@ -13,7 +13,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/shared/ui/card';
 import { Checkbox } from '@/shared/ui/checkbox';
 import { ScrollArea } from '@/shared/ui/scroll-area';
 import { Slider } from '@/shared/ui/slider';
-import { Filter, Package, RotateCcw, Star } from 'lucide-react';
+import { Filter, RotateCcw } from 'lucide-react';
 import { useState } from 'react';
 import { useActiveFiltersCount } from '../lib';
 import {
