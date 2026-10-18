@@ -24,7 +24,6 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from '@/shared/ui/dialog';
 import { Skeleton } from '@/shared/ui/skeleton';
 import { Tabs } from '@/shared/ui/tabs';
