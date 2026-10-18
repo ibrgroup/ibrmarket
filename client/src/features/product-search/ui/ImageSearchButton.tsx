@@ -5,7 +5,6 @@ import { Button } from '@/shared/ui/button';
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
