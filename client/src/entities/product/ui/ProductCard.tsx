@@ -5,7 +5,6 @@ import { cn } from '@/shared';
 import { useQuickViewModal } from '@/shared/store/ui/hooks';
 import { Button } from '@/shared/ui/button';
 import { CheckCircle2, Eye, Heart, Loader2 } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
