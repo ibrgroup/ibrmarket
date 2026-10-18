@@ -5,6 +5,7 @@ import { cn } from '@/shared';
 import { useQuickViewModal } from '@/shared/store/ui/hooks';
 import { Button } from '@/shared/ui/button';
 import { CheckCircle2, Eye, Heart, Loader2 } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
@@ -39,7 +40,7 @@ export const ProductCard = memo<ProductCardProps>(
     const [isTogglingWishlist, setIsTogglingWishlist] = useState(false);
     const [justAddedToCart, setJustAddedToCart] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [catalogVideoHover, setCatalogVideoHover] = useState(false);
+    const [_, setCatalogVideoHover] = useState(false);
     const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
     // Рефы
@@ -309,7 +310,7 @@ export const ProductCard = memo<ProductCardProps>(
                 onScroll={onImagesScroll}
               >
                 {productImages.map((img, index) => (
-                  <img
+                  <Image
                     key={index}
                     src={img.url}
                     alt={product.name || 'Product'}
