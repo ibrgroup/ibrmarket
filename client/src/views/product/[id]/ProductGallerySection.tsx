@@ -154,15 +154,20 @@ export function ProductGallerySection({
     });
   }, [emblaApi, gallerySlidesKey, gallerySlides.length]);
 
-  useEffect(() => {
-    if (!emblaApi) return;
-    const onSelect = () => {
-      const i = emblaApi.selectedScrollSnap();
-      setSelectedImage(i);
-    };
-    emblaApi.on('select', onSelect);
-    return () => emblaApi.off('select', onSelect);
-  }, [emblaApi]);
+useEffect(() => {
+  if (!emblaApi) return;
+  
+  const onSelect = () => {
+    setSelectedImage(emblaApi.selectedScrollSnap());
+  };
+
+  emblaApi.on('select', onSelect);
+  
+  // Функция очистки должна возвращать void, а не функцию
+  return () => { 
+    emblaApi.off('select', onSelect);
+  };
+}, [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi || gallerySlides.length === 0) return;
@@ -400,18 +405,20 @@ export function ProductGallerySection({
             <div className="flex h-full w-full items-center justify-center text-gray-500 dark:text-zinc-400">Нет фото</div>
           ) : (
             <>
-              <div
-                ref={emblaRef}
-                className="h-full relative group"
-                onDragStart={allowEmblaCarouselDrag}
-                onTouchStart={(e) => {
-                  const t = e.target;
-                  if (!(t instanceof Element)) return;
-                  if (t.closest('video') || t.closest('.plyr')) {
-                    e.stopPropagation();
-                  }
-                }}
-              >
+            <div
+  ref={emblaRef}
+  className="h-full relative group"
+  onDragStart={(e) => {
+    e.preventDefault(); // или e.stopPropagation();
+  }}
+  onTouchStart={(e) => {
+    const t = e.target;
+    if (!(t instanceof Element)) return;
+    if (t.closest('video') || t.closest('.plyr')) {
+      e.stopPropagation();
+    }
+  }}
+>
                 <div className="flex">
                   {gallerySlides.map((slide, index) => (
                     <div
@@ -429,19 +436,19 @@ export function ProductGallerySection({
                                 <Play className="text-white text-6xl drop-shadow-lg opacity-70" />
                               </div>
                               <ProductVideoPlyr
-                                key={slide.url}
-                                src={slide.url}
-                                title={slideAlt(productName, slide, index, gallerySlides.length)}
-                                className="flex-1 pointer-events-auto"
-                                autoplay
-                                startMutedForAutoplayPolicy
-                                onPlayerReady={(p: PlyrLike) => {
-                                  mainPlyrRef.current = p;
-                                }}
-                                onPlayerDestroy={() => {
-                                  mainPlyrRef.current = null;
-                                }}
-                              />
+  key={slide.url}
+  src={slide.url}
+  title={slideAlt(productName, slide, index, gallerySlides.length)}
+  className="flex-1 pointer-events-auto"
+  autoplay
+
+  onPlayerReady={(p: PlyrLike) => {
+    mainPlyrRef.current = p;
+  }}
+  onPlayerDestroy={() => {
+    mainPlyrRef.current = null;
+  }}
+/>
                             </div>
                           ) : null
                         ) : (

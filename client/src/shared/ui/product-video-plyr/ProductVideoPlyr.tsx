@@ -19,6 +19,7 @@ export type ProductVideoPlyrProps = {
   src: string;
   poster?: string;
   className?: string;
+  startMutedForAutoplayPolicy?: boolean;
   onPlayerReady?: (player: PlyrLike) => void;
   onPlayerDestroy?: () => void;
   title?: string;
