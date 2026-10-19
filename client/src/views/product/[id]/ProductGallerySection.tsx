@@ -110,7 +110,6 @@ export function ProductGallerySection({
   const safeIndex = gallerySlides.length > 0 ? Math.min(selectedImage, gallerySlides.length - 1) : 0;
   const currentSlide = gallerySlides.length > 0 ? gallerySlides[safeIndex] : null;
   const gallerySlidesKey = useMemo(() => gallerySlides.map((s) => `${s.type}:${s.url}`).join('|'), [gallerySlides, gallerySlides.length]);
-  const activeSlideIsVideo = currentSlide?.type === 'video';
   const mainImageShowsLoader = currentSlide?.type === 'image' && !imageLoadedByUrl[currentSlide.url];
 
   const markImageUrlLoaded = useCallback((url: string) => {
