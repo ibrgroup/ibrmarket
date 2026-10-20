@@ -85,14 +85,6 @@ export function ProductGallerySection({
     Если курсор на контролах плеера (.plyr__controls) — запрещаем drag, 
     чтобы можно было регулировать громкость.
   */
-  const allowEmblaCarouselDrag = useCallback((_api: unknown, event: MouseEvent | TouchEvent) => {
-    const t = event.target;
-    if (!(t instanceof Element)) return true;
-    if (t.closest('.plyr__controls') || t.closest('.plyr__menu')) {
-      return false;
-    }
-    return true;
-  }, []);
 
   /* 
     НАСТРОЙКИ ДЛЯ ЛИСТАНИЯ ПО ОДНОМУ СЛАЙДУ (жесткая привязка)
